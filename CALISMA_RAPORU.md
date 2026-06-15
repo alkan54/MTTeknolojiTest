@@ -31,7 +31,8 @@ Bu proje kapsamında, "Akıllı Depo Yönetimi" senaryosuna uygun olarak, ürün
 - **Soft Delete ve Güncelleme Kuralı:** Veritabanından fiziksel silme yapılmamış, güncelleme işlemlerinde `_context.Entry(entity).State = EntityState.Modified` zorunluluğu kodda açıkça yazılmıştır.
 
 ## 5. Yapay Zeka Kullanımı
-Bu projenin tamamı (veritabanı modeli tasarımı, API katmanlarının geliştirilmesi, EF Core konfigürasyonları, React bileşenleri, Material-UI temalandırması ve Server-Side Pagination işlemleri) size eşlik eden **Antigravity (Google DeepMind)** yapay zeka asistanı tarafından, otonom olarak ve belirlenen kurallar dizisine (prompt yönergelerine) sadık kalınarak geliştirilmiştir. Geliştirme süreci boyunca:
-1. **Planlama aşaması:** Gereksinimler analiz edilip `implementation_plan.md` dökümanı oluşturuldu.
-2. **Uygulama aşaması:** Komut satırı (CLI) üzerinden .NET Web API ve React Vite projeleri oluşturuldu, paketler yüklendi ve kod dosyaları uçtan uca yazıldı.
-3. **Dokümantasyon:** Bu çalışma raporu yine otonom olarak yazılarak test tamamlandı.
+Proje geliştirme sürecinde yapay zeka araçlarından (Gemini asistanı) destek alınmış olup, proje geliştirici ve yapay zeka işbirliği ile tamamlanmıştır. İş bölümü genel olarak şu şekildedir:
+- **Veritabanı ve Temel Altyapı:** Veritabanı modellemesi, ilişkilerin kurulması ve projenin temel backend altyapısı geliştirici (tarafımca) tarafından kurgulanıp oluşturulmuştur.
+- **Frontend Geliştirme:** React ve Material-UI kullanılarak modern, kullanıcı dostu arayüzün tasarlanması ve bileşenlerin (component) oluşturulması aşamalarında yapay zekadan destek alınmıştır.
+- **API Entegrasyonları:** Frontend tarafında backend API'lerinin tetiklenmesi, servislerin yazılması ve veri alışverişinin sağlanması (fetch/axios işlemleri) gibi noktalarda Gemini ile ortaklaşa çalışılmıştır.
+- **Genel Destek:** Geliştirme esnasında karşılaşılan hataların çözümlenmesi ve kod düzenlemelerinde (refactoring) yapay zekadan yardım alınarak süreç hızlandırılmıştır.
